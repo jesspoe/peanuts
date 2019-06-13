@@ -1,18 +1,18 @@
 class ContactsController < ApplicationController
 
-  def new 
-  end 
+  def index
+    @contact = Contact.new(params[:contact])
+  end
 
   def create 
     @contact = Contact.new(contacts_params)
-    byebug
     if @contact.valid?
        @contact.save
-      flash[:notice] = "contact successfully created"
-      redirect_to '/contact'
+      flash[:notice] = "Contact Successfully Created"
+      redirect_to '/thanks'
     else
       flash[:notice] = "Something went wrong, please try again"
-      redirect_to '/contact'
+      redirect_to '/contacts'
     end 
   end
 
@@ -23,5 +23,8 @@ class ContactsController < ApplicationController
   end
 
 end 
+
+
+
 
 
