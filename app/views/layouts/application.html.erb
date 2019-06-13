@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Peanuts</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  <div class="container">
+
+    <div class="header">
+      <h1>Bears Boiled Peanuts</h1>
+      <h3>Southern Style Boiled Peanuts</h3>
+    </div>
+
+    <div class="nav-container"
+      style="border-top: 1px solid black; border-bottom: 1px solid black; padding: 5px; margin: 50px;">
+      <ul class="nav-ul">
+        <li class="nav-item"><a class="nav-button" <%= link_to  "Home", '/'  %></a> </li> <li class="nav-item"><a
+              class="nav-button" <%= link_to "About", '/about'  %></a> </li> <li class="nav-item"><a class="nav-button"
+                <%= link_to "Find Us at the Markets", '/markets' %></a> </li> <li class="nav-item"><a class="nav-button"
+                  <%= link_to "Catering", '/catering' %></a> </li> <li class="nav-item"><a class="nav-button"
+                    <%= link_to "Contact", '/contact/new' %></a> </li> </ul> </div> </div> </head> <body>
+                    <%= yield %>
+                    </body>
+
+</html>
