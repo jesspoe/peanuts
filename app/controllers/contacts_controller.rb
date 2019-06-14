@@ -20,6 +20,12 @@ class ContactsController < ApplicationController
     end 
   end
 
+  def destroy
+    @message = Contact.find(params[:id])
+    @message.destroy
+    redirect_to '/messages'
+  end
+
   private
 
   def contacts_params
