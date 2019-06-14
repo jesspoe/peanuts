@@ -19,12 +19,22 @@
     <div class="nav-container"
       style="border-top: 1px solid black; border-bottom: 1px solid black; padding: 5px; margin: 50px;">
       <ul class="nav-ul">
-        <li class="nav-item"><a class="nav-button" <%= link_to  "Home", '/'  %></a> </li> <li class="nav-item"><a
-              class="nav-button" <%= link_to "About", '/about'  %></a> </li> <li class="nav-item"><a class="nav-button"
-                <%= link_to "Find Us at the Markets", '/markets' %></a> </li> <li class="nav-item"><a class="nav-button"
-                  <%= link_to "Catering", '/catering' %></a> </li> <li class="nav-item"><a class="nav-button"
-                    <%= link_to "Contact", '/contacts' %></a> </li> </ul> </div> </div> </head> <body>
-                    <%= yield %>
-                    </body>
+        <li class="nav-item"><%= link_to "Home", root_path %></li>
+        <li class="nav-item"><%= link_to "About", about_path %></li>
+        <li class="nav-item"><%= link_to "Local Markets", markets_path %></li>
+        <li class="nav-item"><%= link_to "Rent the Cart", catering_path %></li>
+        <li class="nav-item"><%= link_to "Contact Us", '/contacts' %></li>
+        <% if logged_in? %>
+        <li class="nav-item"><%= link_to "Admin Portal", '/messages' %></li>
+        <li class="nav-item"><%= link_to "Log out", logout_path, method: :delete %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</head>
+
+<body>
+  <%= yield %>
+</body>
 
 </html>

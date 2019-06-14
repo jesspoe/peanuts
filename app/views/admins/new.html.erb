@@ -1,0 +1,15 @@
+<% if flash[:notice] %>
+<div class="alert alert-danger" align="center">
+  <p>
+    <%= flash[:notice] %>
+  </p>
+</div>
+<% end %>
+
+<h3>Create Admin</h3>
+<%= form_for :admin, url: '/admins' do |f| %>
+Username: <%= f.text_field :username %>
+Password: <%= f.password_field :password %>
+Password Confirmation: <%= f.password_field :password_confirmation %>
+<%= f.submit "Submit" %>
+<% end %>

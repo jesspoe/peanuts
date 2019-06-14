@@ -1,0 +1,16 @@
+<h1>Inbox</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Message</th>
+  </tr>
+  <% @messages.each do |message| %>
+  <tr>
+    <td><%= message.name %></td>
+    <td><%= message.email %></td>
+    <td><%= message.message %></td>
+  </tr>
+  <% end %>
+</table>

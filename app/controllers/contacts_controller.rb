@@ -4,6 +4,10 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
   end
 
+  def messages 
+    @messages = Contact.all 
+  end 
+
   def create 
     @contact = Contact.new(contacts_params)
     if @contact.valid?
