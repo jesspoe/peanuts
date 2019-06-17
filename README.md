@@ -1,24 +1,19 @@
 # README
+Peanuts website 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
+* Ruby version 2.6.0 
 
 * System dependencies
-
-* Configuration
+  gem 'bcrypt', '~> 3.1.7'
+  gem 'rspec-rails'
 
 * Database creation
-
-* Database initialization
-
+  rails db:create
+  rails db:migrate
+  
 * How to run the test suite
+  rspec 
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
-
-* ...
+* This website is built using Ruby on Rails - deployable on your local machine. 
+* Purpose to showcase custom routes, MVC architectural pattern, and simple form creation. 
