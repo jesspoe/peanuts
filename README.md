@@ -3,15 +3,15 @@ Peanuts website
 
 * Ruby version 2.6.0 
 
-* System dependencies
-  gem 'bcrypt', '~> 3.1.7'
+* System dependencie: 
+  gem 'bcrypt', '~> 3.1.7', 
   gem 'rspec-rails'
 
-* Database creation
-  rails db:create
+* Database creation: 
+  rails db:create, 
   rails db:migrate
   
-* How to run the test suite
+* How to run the test suite: 
   rspec 
 
 
