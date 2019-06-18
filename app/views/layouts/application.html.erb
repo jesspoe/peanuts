@@ -5,7 +5,8 @@
   <title>Peanuts</title>
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -13,10 +14,11 @@
 
     <div class="header">
       <h1>Bears Boiled Peanuts</h1>
-      <h3>Southern Style Boiled Peanuts</h3>
+      <br />
+      <h4>Southern Style Boiled Peanuts</h4>
     </div>
 
-    <div class="nav-container"
+    <nav class="nav-container"
       style="border-top: 1px solid black; border-bottom: 1px solid black; padding: 5px; margin: 50px;">
       <ul class="nav-ul">
         <li class="nav-item"><%= link_to "Home", root_path %></li>
@@ -29,8 +31,8 @@
         <li class="nav-item"><%= link_to "Log out", logout_path, method: :delete %></li>
         <% end %>
       </ul>
-    </div>
   </div>
+  </nav>
 </head>
 
 <body>

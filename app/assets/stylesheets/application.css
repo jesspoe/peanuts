@@ -13,6 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
+  body {
+    font-family: monospace;
+  }
+
  .header {
   text-align: center;
 }
@@ -33,7 +38,7 @@
 .nav-item{
   display: inline;
   margin: 20px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 

@@ -12,10 +12,10 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contacts_params)
     if @contact.valid?
        @contact.save
-      flash[:notice] = "Contact Successfully Created"
+      flash[:notice] = "Contact Successfully Created!"
       redirect_to '/thanks'
     else
-      flash[:notice] = "Something went wrong, please try again"
+      flash[:notice] = "Something went wrong, please try again."
       redirect_to '/contacts'
     end 
   end
