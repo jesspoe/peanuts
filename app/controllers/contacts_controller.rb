@@ -1,24 +1,26 @@
 class ContactsController < ApplicationController
 
-  def index
-    @contact = Contact.new(params[:contact])
+  def new
+    @contact = Contact.new
   end
-
-  def messages 
-    @messages = Contact.all 
-  end 
 
   def create 
     @contact = Contact.new(contacts_params)
+    byebug
     if @contact.valid?
        @contact.save
       flash[:notice] = "Contact Successfully Created!"
+      render :new
       redirect_to '/thanks'
     else
       flash[:notice] = "Something went wrong, please try again."
-      redirect_to '/contacts'
+      render :new
     end 
   end
+  
+  def messages 
+    @messages = Contact.all 
+  end 
 
   def destroy
     @message = Contact.find(params[:id])

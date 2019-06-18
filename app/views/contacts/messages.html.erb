@@ -1,21 +1,29 @@
-<h1>Inbox</h1>
+<div class="container">
+  <h1 align="center">Message Center</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Message</th>
-
-  </tr>
-  <% @messages.each do |message| %>
-  <tr>
-    <td><%= message.name %></td>
-    <td><%= message.email %></td>
-    <td><%= message.message %></td>
-    <td><%= link_to 'Delete', 
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Date Received</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Message</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <% @messages.each do |message| %>
+    <tbody>
+      <tr>
+        <td><%= message.created_at %></td>
+        <td><%= message.name %></td>
+        <td><%= message.email %></td>
+        <td><%= message.message %></td>
+        <td><%= link_to 'Delete', 
                  contact_path(message.id), 
                              method: :delete, 
                              data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-  <% end %>
-</table>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
