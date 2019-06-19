@@ -25,7 +25,7 @@
         <li class="nav-item"><%= link_to "About", about_path %></li>
         <li class="nav-item"><%= link_to "Local Markets", markets_path %></li>
         <li class="nav-item"><%= link_to "Rent the Cart", catering_path %></li>
-        <li class="nav-item"><%= link_to "Contact Us", contacts_path %></li>
+        <li class="nav-item"><%= link_to "Contact Us", new_contact_path %></li>
         <% if logged_in? %>
         <li class="nav-item"><%= link_to "Admin Portal", messages_path %></li>
         <li class="nav-item"><%= link_to "Log out", logout_path, method: :delete %></li>

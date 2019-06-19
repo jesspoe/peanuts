@@ -5,12 +5,10 @@ class ContactsController < ApplicationController
   end
 
   def create 
-    @contact = Contact.new(contacts_params)
-    byebug
+    @contact = Contact.create(contacts_params)
     if @contact.valid?
        @contact.save
       flash[:notice] = "Contact Successfully Created!"
-      render :new
       redirect_to '/thanks'
     else
       flash[:notice] = "Something went wrong, please try again."
@@ -31,7 +29,7 @@ class ContactsController < ApplicationController
   private
 
   def contacts_params
-    params.require(:contact).permit(:name, :email, :message)
+    params.require(:contact).permit(:authenticity_token, :name, :email, :message)
   end
 
 end 

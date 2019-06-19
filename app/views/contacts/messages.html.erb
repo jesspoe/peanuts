@@ -1,3 +1,4 @@
+<% if logged_in? %>
 <div class="container">
   <h1 align="center">Message Center</h1>
 
@@ -14,7 +15,7 @@
     <% @messages.each do |message| %>
     <tbody>
       <tr>
-        <td><%= message.created_at %></td>
+        <th scope="row"><%= message.created_at %></th>
         <td><%= message.name %></td>
         <td><%= message.email %></td>
         <td><%= message.message %></td>
@@ -27,3 +28,4 @@
     </tbody>
   </table>
 </div>
+<% end %>
