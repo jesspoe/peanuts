@@ -13,7 +13,7 @@ class AdminsController < ApplicationController
       flash[:success] = "Welcome to the Bear's Peanuts!"
       redirect_to root_path
     else
-      render 'new'
+      render 'new', status: 400 
     end
   end
 
