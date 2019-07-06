@@ -10,3 +10,13 @@
   height: 80vh;
   width: 75%;
 }
+
+p {
+  font-size: 1.5em;
+  margin: 25px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
