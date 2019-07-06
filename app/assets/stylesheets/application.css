@@ -14,11 +14,11 @@
  *= require_self
  */
 
-  body {
+body {
     font-family: monospace;
   }
 
- .header {
+.header {
   text-align: center;
 }
 
