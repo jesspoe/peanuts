@@ -8,7 +8,6 @@ RSpec.describe AdminsController, type: :controller do
       expect(response).to redirect_to root_path
     end
   
-
   
     it "returns failure for mismatched passwords" do
       post :create, params:{admin: {username: "Jessica", password: "123123", password_confirmation: "124124"}}
