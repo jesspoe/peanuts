@@ -8,10 +8,10 @@ class ContactsController < ApplicationController
     @contact = Contact.create(contacts_params)
     if @contact.valid?
        @contact.save
-      flash[:notice] = "Contact Successfully Created!"
+      flash[:notice] = "Message Delivered!"
       redirect_to '/thanks'
     else
-      flash[:notice] = "Something went wrong, please try again."
+      flash[:notice] = "Invalid entry, please try again."
       render "new", status: 400 
     end 
   end

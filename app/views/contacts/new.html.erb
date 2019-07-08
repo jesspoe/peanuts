@@ -1,4 +1,11 @@
 <div class="container">
+  <% if flash[:notice] %>
+  <div class="alert alert-danger" align="center">
+    <% flash.each do |key, value| %>
+    <%= content_tag :div, value, class: "flash #{key}" %>
+    <% end %>
+  </div>
+  <% end %>
   <h1 align='center'>Contact Us</h1>
   <%= render 'contact_form' %>
 </div>

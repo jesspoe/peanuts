@@ -1,25 +1,9 @@
-.about-wrapper{
-  height: 65vh;
-  width: 100%;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  background: url("peanuts.jpg") no-repeat center center fixed;
-  background-size: cover;
-  overflow: hidden;
-}
 
 .about-header{
-  height: 100vh;
-  width: 100%;
-  background-color: #ffffff;
-  opacity: 0.6;
-  filter: alpha(opacity=60);
+align-items: center;
 }
 
 .about-p {
-  height: 50%;
-  width: 75%;
   font-size: 1.5em;
   margin:30px;
   text-align: justify;
