@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
       redirect_to '/thanks'
     else
       flash[:notice] = "Something went wrong, please try again."
-      render :new
+      render "new", status: 400 
     end 
   end
   

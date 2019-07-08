@@ -18,8 +18,8 @@ RSpec.describe ContactsController, type: :controller do
   
   
     it "returns failure for missing message" do
-      post :create, params:{contact: {name: "Jessica", email: "jesspoe@gmail.com", message: nil}}
-      expect(response).to redirect_to new_contact_path
+      post :create, params:{contact: {name: "Jessica", email: "jesspoe@gmail.com", message: "" }}
+      expect(response).to have_http_status(400)
     end
     
 
