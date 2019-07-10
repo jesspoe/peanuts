@@ -20,9 +20,15 @@ class ContactsController < ApplicationController
     @messages = Contact.all 
   end 
 
+
   def destroy
-    @message = Contact.find(params[:id])
-    @message.destroy
+    @message = Contact.find_by(id: params[:id])
+    if @message
+      @message.destroy
+      flash[:notice] = "Message Removed"
+    else
+      flash[:errors] = "message doesn't exist"
+    end
     redirect_to '/messages'
   end
 

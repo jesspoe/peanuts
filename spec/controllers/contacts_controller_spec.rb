@@ -2,13 +2,13 @@ require 'rails_helper'
 
 RSpec.describe ContactsController, type: :controller do
 
-  before do
-    ActionController::Base.allow_forgery_protection = true
-  end
+  # before do
+  #   ActionController::Base.allow_forgery_protection = true
+  # end
   
-  after do
-    ActionController::Base.allow_forgery_protection = false
-  end
+  # after do
+  #   ActionController::Base.allow_forgery_protection = false
+  # end
 
   describe "POST #create" do
     it "returns http success" do
@@ -22,9 +22,7 @@ RSpec.describe ContactsController, type: :controller do
       expect(response).to have_http_status(400)
     end
     
-
   end
-
 
 end
 
