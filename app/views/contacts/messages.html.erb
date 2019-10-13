@@ -15,7 +15,7 @@
     <% @messages.each do |message| %>
     <tbody>
       <tr>
-        <th scope="row"><%= message.created_at %></th>
+        <th scope="row"><%= message.created_at.localtime %></th>
         <td><%= message.name %></td>
         <td><%= message.email %></td>
         <td><%= message.message %></td>
