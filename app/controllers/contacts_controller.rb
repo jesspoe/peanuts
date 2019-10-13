@@ -1,5 +1,9 @@
 class ContactsController < ApplicationController
 
+  # TODO: MAKE A FILTER FEATURE ON MESSAGES
+
+  
+
   def new
     @contact = Contact.new
   end

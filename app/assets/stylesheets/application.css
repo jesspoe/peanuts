@@ -42,6 +42,13 @@ body {
   font-size: 20px;
 }
 
+p {
+  font-size: 1.5em;
+  margin:30px;
+  text-align: justify;
+  color: black;
+}
+
 
 navbutton :hover{
   border-color: rgb(163, 34, 34);
