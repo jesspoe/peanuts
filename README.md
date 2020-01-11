@@ -16,4 +16,4 @@ Peanuts website
 
 
 * This website is built using Ruby on Rails - deployable on your local machine. 
-* Purpose to showcase custom routes, MVC architectural pattern, and simple form creation. 
+* Purpose to showcase custom routes, MVC architectural pattern, security, and form creation. 
