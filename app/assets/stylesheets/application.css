@@ -18,6 +18,10 @@ body {
     font-family: monospace;
     margin-bottom: 50px;
     clear: both;
+    background-image: url('bear.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 200px -60px;
   }
 
 .header {
